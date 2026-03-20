@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Listing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">MovieList</div>
+  <div class="right-section">
+    <div id="userAvatar" class="avatar"></div>
+    <button id="loginBtn" class="btn">Sign In</button>
+  </div>
+</nav>
+
+<!-- LOGIN -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <h2>Sign In</h2>
+    <input id="loginEmail" placeholder="Email">
+    <input id="loginPassword" type="password" placeholder="Password">
+    <button onclick="login()" class="btn">Sign In</button>
+    <p>Not registered? <span onclick="showRegister()">Register here</span></p>
+  </div>
+</div>
+
+<!-- REGISTER -->
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+    <h2>Register</h2>
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="register()" class="btn">Register</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Search Movies 🎬</h1>
+  <input type="text" id="searchBar" placeholder="Search movies...">
+
+  <div class="filters">
+    <select id="genreFilter"><option value="">All Genres</option></select>
+    <select id="yearFilter"><option value="">All Years</option></select>
+    <select id="ratingFilter">
+      <option value="">All Ratings</option>
+      <option value="5">⭐⭐⭐⭐⭐</option>
+      <option value="4">⭐⭐⭐⭐</option>
+      <option value="3">⭐⭐⭐</option>
+    </select>
+  </div>
+</section>
+
+<!-- HERO MOVIES -->
+<section id="movieContainer" class="movies"></section>
+
+<!-- PAGINATION -->
+<section>
+  <h2 style="text-align:center">All Movies</h2>
+  <div id="paginatedMovies" class="movies"></div>
+  <div class="pagination">
+    <button onclick="prevPage()">Prev</button>
+    <span id="pageNumber">1</span>
+    <button onclick="nextPage()">Next</button>
+  </div>
+</section>
+
+<!-- TRAILER -->
+<div id="trailerModal" class="modal">
+  <div class="modal-content trailer-box">
+    <span onclick="closeTrailer()">✖</span>
+    <iframe id="trailerFrame"></iframe>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 MovieList. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
