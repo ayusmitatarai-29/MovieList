@@ -1,5 +1,3 @@
-// ======================= AUTH SYSTEM =======================
-
 const loginBtn = document.getElementById("loginBtn");
 const loginModal = document.getElementById("loginModal");
 const registerModal = document.getElementById("registerModal");
